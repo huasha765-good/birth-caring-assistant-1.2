@@ -12,14 +12,14 @@ const TimeAnchor = ({ sections, activeSection, onSectionChange }) => {
   };
 
   return (
-    <div className="sticky top-16 bg-white shadow-sm z-10 py-2 overflow-x-auto">
+    <div className="sticky top-16 bg-white/80 backdrop-blur-md z-10 py-2 overflow-x-auto border-b border-gray-100">
       <div className="container mx-auto px-4">
         <div className="flex space-x-2 justify-between">
           {sections.map((section) => (
             <button
               key={section.id}
               onClick={() => onSectionChange(section.id)}
-              className={`flex flex-col items-center px-3 py-2 rounded-md text-xs transition-colors ${
+              className={`flex flex-col items-center px-3 py-2 rounded-lg text-xs transition-colors ${
                 activeSection === section.id
                   ? 'bg-blue-100 text-blue-700'
                   : 'bg-gray-50 text-gray-600 hover:bg-gray-100'

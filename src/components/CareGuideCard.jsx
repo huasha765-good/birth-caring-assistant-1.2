@@ -18,14 +18,14 @@ const CareGuideCard = ({ title, icon, items }) => {
   };
 
   return (
-    <div className="bg-white rounded-lg shadow-md overflow-hidden">
+    <div className="apple-card overflow-hidden">
       <div 
-        className="flex justify-between items-center p-4 bg-blue-50 cursor-pointer"
+        className="flex justify-between items-center p-4 cursor-pointer"
         onClick={toggleExpanded}
       >
         <div className="flex items-center">
           <span className="text-blue-600 mr-2">{icon}</span>
-          <h2 className="text-lg font-semibold text-gray-800">{title}</h2>
+          <h2 className="text-lg font-semibold text-gray-900">{title}</h2>
         </div>
         {expanded ? (
           <ChevronUp className="h-5 w-5 text-gray-500" />
@@ -35,19 +35,19 @@ const CareGuideCard = ({ title, icon, items }) => {
       </div>
 
       {expanded && (
-        <div className="p-4">
+        <div className="p-4 pt-0">
           <ul className="space-y-3">
             {items.map((item, index) => (
-              <li key={index} className="border-b pb-2 last:border-0">
+              <li key={index} className="border-b border-gray-100 pb-3 last:border-0">
                 <div 
                   className="flex items-start cursor-pointer"
                   onClick={() => toggleItemCompletion(index)}
                 >
-                  <div className={`mt-1 mr-2 h-5 w-5 rounded-full flex items-center justify-center ${
-                    completedItems[index] ? 'bg-green-100' : 'bg-gray-100'
+                  <div className={`mt-1 mr-3 h-5 w-5 rounded-full flex items-center justify-center ${
+                    completedItems[index] ? 'bg-blue-100' : 'bg-gray-100'
                   }`}>
                     {completedItems[index] && (
-                      <svg className="h-3 w-3 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <svg className="h-3 w-3 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                       </svg>
                     )}
