@@ -19,7 +19,7 @@ const TimeAnchor = ({ sections, activeSection, onSectionChange }) => {
             <button
               key={section.id}
               onClick={() => onSectionChange(section.id)}
-              className={`flex flex-col items-center px-3 py-2 rounded-lg text-xs transition-colors flex-1 min-w-0 ${
+              className={`flex flex-col items-center px-3 py-2 rounded-lg text-caption-md transition-colors flex-1 min-w-0 ${
                 activeSection === section.id
                   ? 'bg-blue-100 text-blue-700'
                   : 'bg-gray-50 text-gray-600 hover:bg-gray-100'

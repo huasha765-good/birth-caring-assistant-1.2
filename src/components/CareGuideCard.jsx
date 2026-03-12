@@ -25,10 +25,10 @@ const CareGuideCard = ({ title, icon, items }) => {
       >
         <div className="flex items-center">
           <span className="text-blue-600 mr-2">{icon}</span>
-          <h2 className="text-lg font-semibold text-gray-900">{title}</h2>
+          <h2 className="text-headline-sm text-gray-900">{title}</h2>
         </div>
         {expanded ? (
-          <ChevronUp className="h-5 w-5 text-gray-500" />
+          <ChevronUp className="h-5 w-5 text-gray-500" /> 
         ) : (
           <ChevronDown className="h-5 w-5 text-gray-500" />
         )}
@@ -53,11 +53,11 @@ const CareGuideCard = ({ title, icon, items }) => {
                     )}
                   </div>
                   <div className={`${completedItems[index] ? 'line-through text-gray-500' : 'text-gray-800'}`}>
-                    {item.text}
+                    <span className="text-body-sm">{item.text}</span>
                     {item.subItems && (
                       <ul className="mt-2 ml-5 space-y-1">
                         {item.subItems.map((subItem, subIndex) => (
-                          <li key={subIndex} className="text-sm text-gray-600 flex items-start">
+                          <li key={subIndex} className="text-caption-lg text-gray-600 flex items-start">
                             <span className="mr-1">•</span>
                             <span>{subItem}</span>
                           </li>
