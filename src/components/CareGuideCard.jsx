@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
-
 const CareGuideCard = ({ title, icon, items }) => {
   const [expanded, setExpanded] = useState(true);
 
@@ -37,7 +36,7 @@ const CareGuideCard = ({ title, icon, items }) => {
                         {item.subItems.map((subItem, subIndex) =>
                 <li key={subIndex} className="text-gray-600 flex w-[240px] justify-start items-center">
                             <span className="mr-1">•</span>
-                            <span className="break-words my-[5px] text-[14px]">{subItem}</span>
+                            <span className="break-words my-[5px] text-[14px] flex-1">{subItem}</span>
                           </li>
                 )}
                       </ul>
