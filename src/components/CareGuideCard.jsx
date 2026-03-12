@@ -29,19 +29,19 @@ const CareGuideCard = ({ title, icon, items }) => {
           <ul className="space-y-3">
             {items.map((item, index) =>
           <li key={index} className="border-b border-gray-100 pb-3 last:border-0">
-                <div className="text-gray-800">
-                  <span className="text-body-md break-words text-left block">{item.text}</span>
-                  {item.subItems &&
-              <ul className="mt-2 ml-5 space-y-1">
-                        {item.subItems.map((subItem, subIndex) =>
-                <li key={subIndex} className="text-gray-600 flex w-[240px] justify-start items-center">
-                            <span className="mr-1">•</span>
-                            <span className="break-words my-[5px] text-[14px] flex-1 text-left">{subItem}</span>
-                          </li>
-                )}
-                      </ul>
-              }
+                <div className="text-gray-800 flex">
+                  <span className="text-body-md break-words text-left block w-full">{item.text}</span>
                 </div>
+                {item.subItems &&
+              <ul className="mt-2 ml-5 space-y-1">
+                    {item.subItems.map((subItem, subIndex) =>
+                <li key={subIndex} className="text-gray-600 flex">
+                      <span className="mr-1">•</span>
+                      <span className="break-words my-[5px] text-[14px] text-left">{subItem}</span>
+                    </li>
+                )}
+                  </ul>
+              }
               </li>
           )}
           </ul>
