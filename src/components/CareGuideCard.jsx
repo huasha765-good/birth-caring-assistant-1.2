@@ -43,7 +43,7 @@ const CareGuideCard = ({ title, icon, items }) => {
                   className="flex items-start cursor-pointer"
                   onClick={() => toggleItemCompletion(index)}
                 >
-                  <div className={`mt-1 mr-3 h-5 w-5 rounded-full flex items-center justify-center ${
+                  <div className={`mt-1 mr-3 h-5 w-5 rounded-full flex items-center justify-center flex-shrink-0 ${
                     completedItems[index] ? 'bg-blue-100' : 'bg-gray-100'
                   }`}>
                     {completedItems[index] && (

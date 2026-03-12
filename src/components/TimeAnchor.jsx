@@ -19,7 +19,7 @@ const TimeAnchor = ({ sections, activeSection, onSectionChange }) => {
             <button
               key={section.id}
               onClick={() => onSectionChange(section.id)}
-              className={`flex flex-col items-center px-3 py-2 rounded-lg text-xs transition-colors ${
+              className={`flex flex-col items-center px-3 py-2 rounded-lg text-xs transition-colors flex-1 min-w-0 ${
                 activeSection === section.id
                   ? 'bg-blue-100 text-blue-700'
                   : 'bg-gray-50 text-gray-600 hover:bg-gray-100'
@@ -28,7 +28,9 @@ const TimeAnchor = ({ sections, activeSection, onSectionChange }) => {
               <span className="mb-1">
                 {iconMap[section.id] || <Clock className="h-4 w-4" />}
               </span>
-              <span className="whitespace-nowrap">{section.title}</span>
+              <span className="whitespace-nowrap overflow-hidden text-ellipsis w-full">
+                {section.title}
+              </span>
             </button>
           ))}
         </div>
