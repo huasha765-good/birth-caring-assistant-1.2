@@ -31,11 +31,11 @@ const CareGuideCard = ({ title, icon, items }) => {
             {items.map((item, index) =>
           <li key={index} className="border-b border-gray-100 pb-3 last:border-0">
                 <div className="text-gray-800">
-                  <span className="text-body-sm break-words text-[14px]">{item.text}</span>
+                  <span className="text-body-md break-words">{item.text}</span>
                   {item.subItems &&
                 <ul className="mt-2 ml-5 space-y-1">
                         {item.subItems.map((subItem, subIndex) =>
-                  <li key={subIndex} className="text-caption-lg text-gray-600 flex items-start">
+                  <li key={subIndex} className="text-body-sm text-gray-600 flex items-start">
                             <span className="mr-1">•</span>
                             <span className="break-words">{subItem}</span>
                           </li>
