@@ -33,15 +33,15 @@ const CareGuideCard = ({ title, icon, items }) => {
                   <span className="text-body-md break-words text-left w-full pl-0">{item.text}</span>
                 </div>
                 {item.subItems &&
-              <ul className="mt-2 ml-0 space-y-1">
+            <ul className="mt-2 ml-0 space-y-1">
                     {item.subItems.map((subItem, subIndex) =>
-                <li key={subIndex} className="text-gray-600 flex">
+              <li key={subIndex} className="text-gray-600 flex justify-center items-center">
                       <span className="mr-1">•</span>
                       <span className="break-words my-[5px] text-[14px] text-left w-full pl-0">{subItem}</span>
                     </li>
-                )}
+              )}
                   </ul>
-              }
+            }
               </li>
           )}
           </ul>
