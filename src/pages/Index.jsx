@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronRight, Heart, Baby, User, Clock, CheckCircle } from 'lucide-react';
+import { Heart, Baby, User, Clock, CheckCircle } from 'lucide-react';
 import CareGuideCard from '@/components/CareGuideCard';
 import TimeAnchor from '@/components/TimeAnchor';
 import EncouragementToast from '@/components/EncouragementToast';
@@ -196,8 +196,8 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white pb-20">
-      <header className="bg-white/80 backdrop-blur-md sticky top-0 z-10 border-b border-gray-100">
+    <div className="min-h-screen bg-gray-50 pb-20">
+      <header className="bg-white sticky top-0 z-10 border-b border-gray-200">
         <div className="container mx-auto px-4 py-4">
           <h1 className="text-display-sm text-center text-gray-900">准爸爸剖腹产护理助手</h1>
           <p className="text-center text-caption-lg text-gray-500 mt-1">陪伴是最好的照顾</p>
@@ -215,7 +215,7 @@ const Index = () => {
           <img 
             src="https://nocode.meituan.com/photo/search?keyword=father,newborn,care&width=400&height=300" 
             alt="准爸爸照顾新生儿" 
-            className="mx-auto object-cover rounded-[18px] shadow-sm h-48 w-full max-w-md"
+            className="mx-auto object-cover rounded-lg shadow-sm h-48 w-full max-w-md"
           />
           <p className="mt-4 text-body-sm text-gray-600 max-w-2xl mx-auto">
             记住一句话：月子之仇，记一辈子。你现在的每一点照顾，都是给感情存钱。加油，准爸爸！ 💪

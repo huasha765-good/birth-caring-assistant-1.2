@@ -18,7 +18,7 @@ const CareGuideCard = ({ title, icon, items }) => {
   };
 
   return (
-    <div className="apple-card overflow-hidden">
+    <div className="mtd-card overflow-hidden">
       <div 
         className="flex justify-between items-center p-4 cursor-pointer"
         onClick={toggleExpanded}

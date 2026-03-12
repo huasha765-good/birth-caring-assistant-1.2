@@ -18,7 +18,7 @@ const EncouragementToast = () => {
 
   return (
     <div className="fixed bottom-4 left-0 right-0 z-50 flex justify-center">
-      <div className="bg-white/90 backdrop-blur-md rounded-[18px] shadow-lg p-4 mx-4 flex items-center border border-white/20 max-w-[90%]">
+      <div className="bg-white rounded-lg shadow-lg p-4 mx-4 flex items-center border border-gray-200 max-w-[90%]">
         <Heart className="h-5 w-5 text-red-500 mr-2 flex-shrink-0" />
         <p className="text-caption-lg text-gray-800 break-words">{randomEncouragement}</p>
       </div>

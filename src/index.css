@@ -84,7 +84,7 @@
     line-height: 1.5;
   }
   
-  /* 字体大小规范 */
+  /* MTD 字体大小规范 */
   .text-display-lg { font-size: 32px; line-height: 42px; font-weight: 600; }
   .text-display-md { font-size: 28px; line-height: 36px; font-weight: 600; }
   .text-display-sm { font-size: 24px; line-height: 32px; font-weight: 600; }
@@ -104,36 +104,32 @@
 }
 
 @layer components {
-  /* 苹果风格卡片 */
-  .apple-card {
-    @apply bg-white rounded-[18px] shadow-sm border border-white/20;
-    backdrop-filter: blur(20px);
-    box-shadow: 0 4px 32px rgba(0, 0, 0, 0.08);
+  /* MTD 卡片样式 */
+  .mtd-card {
+    @apply bg-white rounded-lg shadow-sm border border-gray-200;
   }
   
-  /* 苹果风格按钮 */
-  .apple-button {
-    @apply rounded-full px-6 py-2.5 font-medium transition-all duration-200;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+  /* MTD 按钮样式 */
+  .mtd-button {
+    @apply rounded-md px-4 py-2 font-medium transition-all duration-200;
   }
   
-  .apple-button-primary {
-    @apply bg-blue-600 text-white hover:bg-blue-700 active:scale-[0.98];
+  .mtd-button-primary {
+    @apply bg-blue-600 text-white hover:bg-blue-700 active:bg-blue-800;
   }
   
-  .apple-button-secondary {
-    @apply bg-gray-100 text-gray-900 hover:bg-gray-200 active:scale-[0.98];
+  .mtd-button-secondary {
+    @apply bg-gray-100 text-gray-900 hover:bg-gray-200 active:bg-gray-300;
   }
   
-  /* 苹果风格输入框 */
-  .apple-input {
-    @apply rounded-[10px] border border-gray-200 bg-white px-4 py-3 text-base;
-    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.04);
+  /* MTD 输入框样式 */
+  .mtd-input {
+    @apply rounded-md border border-gray-300 bg-white px-3 py-2 text-base;
   }
   
-  /* 苹果风格分隔线 */
-  .apple-divider {
-    @apply h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent;
+  /* MTD 分隔线 */
+  .mtd-divider {
+    @apply h-px bg-gray-200;
   }
 }
 
@@ -204,12 +200,12 @@
   }
   
   /* 优化卡片内边距 */
-  .apple-card {
-    @apply rounded-[16px];
+  .mtd-card {
+    @apply rounded-md;
   }
   
   /* 优化按钮内边距 */
-  .apple-button {
-    @apply px-4 py-2;
+  .mtd-button {
+    @apply px-3 py-1.5;
   }
 }
