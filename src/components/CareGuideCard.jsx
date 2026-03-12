@@ -53,13 +53,13 @@ const CareGuideCard = ({ title, icon, items }) => {
                     )}
                   </div>
                   <div className={`${completedItems[index] ? 'line-through text-gray-500' : 'text-gray-800'}`}>
-                    <span className="text-body-sm">{item.text}</span>
+                    <span className="text-body-sm break-words">{item.text}</span>
                     {item.subItems && (
                       <ul className="mt-2 ml-5 space-y-1">
                         {item.subItems.map((subItem, subIndex) => (
                           <li key={subIndex} className="text-caption-lg text-gray-600 flex items-start">
                             <span className="mr-1">•</span>
-                            <span>{subItem}</span>
+                            <span className="break-words">{subItem}</span>
                           </li>
                         ))}
                       </ul>
