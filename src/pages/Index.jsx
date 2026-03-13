@@ -101,7 +101,7 @@ const Index = () => {
       completed: false
     },
     {
-    text: '第4-5天（出院）',
+      text: '第4-5天（出院）',
       subItems: [
       '提前办好出院手续，了解各种注意事项',
       '给宝宝穿好衣服、戴好帽子、用包被包好',
@@ -216,8 +216,8 @@ const Index = () => {
             alt="准爸爸照顾新生儿"
             className="mx-auto object-cover rounded-lg shadow-sm h-48 w-full max-w-md" />
 
-          <p className="mt-4 text-body-sm text-gray-600 max-w-2xl mx-auto">
-            记住一句话：月子之仇，记一辈子。你现在的每一点照顾，都是给感情存钱。加油，准爸爸！ 💪
+          <p className="mt-4 text-gray-600 max-w-2xl mx-auto text-left">你现在的每一点照顾，都是给感情存钱。加油，准爸爸！ 💪
+
           </p>
         </div>
 
