@@ -65,7 +65,7 @@ const TimeAnchor = ({ sections, activeSection, onSectionChange }) => {
 
   // 当前使用方案1，可以根据需要切换为方案2或方案3
   return (
-    <div className="sticky top-16 bg-white z-10 py-4 overflow-x-auto border-b border-[#00000000]">
+    <div className="sticky top-16 bg-white z-10 overflow-x-auto border-b border-[#00000000] h-[70px] py-[12px]">
       <div className="container mx-auto px-4">
         <CardStyleNavigation />
         {/* <TabStyleNavigation /> */}
