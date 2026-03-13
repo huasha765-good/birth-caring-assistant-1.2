@@ -197,7 +197,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 pb-20">
-      <header className="bg-white sticky top-0 z-10 border-b border-gray-200">
+      <header className="bg-white sticky top-0 z-10 border-b border-[#00000000]">
         <div className="container mx-auto px-4 py-4">
           <h1 className="text-display-sm text-center text-gray-900">准爸爸剖腹产护理助手</h1>
           <p className="text-center text-caption-lg text-gray-500 mt-1">陪伴是最好的照顾</p>
