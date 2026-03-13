@@ -65,12 +65,12 @@ const TimeAnchor = ({ sections, activeSection, onSectionChange }) => {
 
   // 方案3: 点状指示器导航
   const DotStyleNavigation = () => (
-    <div className="flex justify-center space-x-2">
+    <div className="flex justify-center space-x-4">
       {sections.map((section) => (
         <button
           key={section.id}
           onClick={() => onSectionChange(section.id)}
-          className={`flex items-center justify-center w-3 h-3 rounded-full transition-all duration-200 ${
+          className={`flex items-center justify-center w-4 h-4 rounded-full transition-all duration-200 ${
             activeSection === section.id
               ? 'bg-blue-500 scale-125'
               : 'bg-gray-300 hover:bg-gray-400'
@@ -83,13 +83,13 @@ const TimeAnchor = ({ sections, activeSection, onSectionChange }) => {
     </div>
   );
 
-  // 当前使用方案2，可以根据需要切换为方案1或方案3
+  // 当前使用方案3，可以根据需要切换为方案1或方案2
   return (
-    <div className="sticky top-16 bg-white z-10 py-3 overflow-x-auto border-b border-gray-200">
+    <div className="sticky top-16 bg-white z-10 py-4 overflow-x-auto border-b border-gray-200">
       <div className="container mx-auto px-4">
         {/* <CardStyleNavigation /> */}
-        <TabStyleNavigation />
-        {/* <DotStyleNavigation /> */}
+        {/* <TabStyleNavigation /> */}
+        <DotStyleNavigation />
       </div>
     </div>
   );
