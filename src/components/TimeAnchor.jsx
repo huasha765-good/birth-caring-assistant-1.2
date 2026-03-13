@@ -1,9 +1,8 @@
 import React from 'react';
-
 const TimeAnchor = ({ sections, activeSection, onSectionChange }) => {
   // 方案1: 卡片式导航（去掉图标）
   const CardStyleNavigation = () =>
-  <div className="flex space-x-2 overflow-x-auto pb-2">
+  <div className="flex space-x-1 overflow-x-auto pb-1">
       {sections.map((section) =>
     <button
       key={section.id}
