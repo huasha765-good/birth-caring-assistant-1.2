@@ -195,7 +195,7 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 pb-20">
+    <div className="min-h-screen bg-[#f5f7fa] pb-20">
       <header className="bg-white sticky top-0 z-10 border-b border-[#00000000]">
         <div className="container mx-auto px-4 py-4">
           <h1 className="text-display-sm text-center text-gray-900">准爸爸剖腹产护理助手</h1>
