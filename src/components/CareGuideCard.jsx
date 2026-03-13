@@ -36,7 +36,7 @@ const CareGuideCard = ({ title, icon, items }) => {
             <ul className="mt-2 ml-0 space-y-1">
                     {item.subItems.map((subItem, subIndex) =>
               <li key={subIndex} className="text-gray-600 flex justify-center items-center">
-                      <span className="mr-1">•</span>
+                      <span className="mr-1 w-[12px]">•</span>
                       <span className="break-words my-[5px] text-[14px] text-left w-full pl-0">{subItem}</span>
                     </li>
               )}
