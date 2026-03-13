@@ -1,7 +1,6 @@
-
 import TimeAnchor from '@/components/TimeAnchor';
 import EncouragementToast from '@/components/EncouragementToast';
-import { Heart, User, Baby, CheckCircle, Clock } from 'lucide-react';
+import { Heart, User, Baby, CheckCircle, Clock, Calendar, Home, AlertTriangle, Shield, Star, Activity, Users } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 import CareGuideCard from '@/components/CareGuideCard';
 const Index = () => {
@@ -29,7 +28,7 @@ const Index = () => {
   {
     id: 'before',
     title: '手术前一天',
-    icon: <Clock className="h-5 w-5" />,
+    icon: <Calendar className="h-5 w-5" />,
     items: [
     { text: '1. 带老婆吃一顿她想吃的大餐（术后一个月不能出门乱吃，这是最后机会）', completed: false },
     { text: '2. 两人一起清点待产包，确认物品位置，你要知道每样东西在哪', completed: false },
@@ -40,7 +39,7 @@ const Index = () => {
   {
     id: 'day',
     title: '手术当天',
-    icon: <Heart className="h-5 w-5" />,
+    icon: <Activity className="h-5 w-5" />,
     items: [
     {
       text: '1. 送进手术室前：陪老婆做好术前检查和签字手续',
@@ -77,7 +76,7 @@ const Index = () => {
   {
     id: 'hospital',
     title: '住院期间（第2-5天）',
-    icon: <User className="h-5 w-5" />,
+    icon: <Home className="h-5 w-5" />,
     items: [
     {
       text: '第2天',
@@ -174,7 +173,7 @@ const Index = () => {
   {
     id: 'warnings',
     title: '⚠️ 最容易结"月子仇"的雷区',
-    icon: <CheckCircle className="h-5 w-5" />,
+    icon: <AlertTriangle className="h-5 w-5" />,
     items: [
     { text: '1. 带老婆吃一顿她想吃的大餐（术后一个月不能出门乱吃，这是最后机会）', completed: false },
     { text: '2. 两人一起清点待产包，确认物品位置，你要知道每样东西在哪', completed: false },
