@@ -25,7 +25,7 @@ const TimeAnchor = ({ sections, activeSection, onSectionChange }) => {
             'bg-gray-50 text-gray-600 hover:bg-gray-100'}`
             }>
 
-              <span className="mb-1">
+              <span className="mb-1 flex items-center justify-center w-6 h-6 rounded-full bg-current">
                 {iconMap[section.id] || <Clock className="h-4 w-4" />}
               </span>
               <span className="whitespace-nowrap overflow-hidden text-ellipsis w-full text-[12px]">
