@@ -1,5 +1,4 @@
 import React from 'react';
-import { Clock, Heart, User, Baby, AlertTriangle } from 'lucide-react';
 
 const TimeAnchor = ({ sections, activeSection, onSectionChange }) => {
   // 方案1: 卡片式导航（去掉图标）
@@ -15,11 +14,6 @@ const TimeAnchor = ({ sections, activeSection, onSectionChange }) => {
               : 'bg-white text-gray-600 hover:bg-gray-100 border border-gray-200'
           }`}
         >
-          <span className="mb-1 flex items-center justify-center w-8 h-8 rounded-full bg-current/20">
-            {React.cloneElement(section.icon, {
-              className: "h-4 w-4 text-current"
-            })}
-          </span>
           <span className="whitespace-nowrap text-sm font-medium">
             {section.title}
           </span>
@@ -35,17 +29,12 @@ const TimeAnchor = ({ sections, activeSection, onSectionChange }) => {
         <button
           key={section.id}
           onClick={() => onSectionChange(section.id)}
-          className={`flex-1 flex items-center justify-center space-x-1 px-3 py-2 rounded-md transition-all duration-200 ${
+          className={`flex-1 flex items-center justify-center px-3 py-2 rounded-md transition-all duration-200 ${
             activeSection === section.id
               ? 'bg-white text-blue-600 shadow-sm'
               : 'text-gray-600 hover:text-gray-900'
           }`}
         >
-          <span className="flex items-center justify-center w-5 h-5">
-            {React.cloneElement(section.icon, {
-              className: "h-3.5 w-3.5 text-current"
-            })}
-          </span>
           <span className="whitespace-nowrap text-sm font-medium">
             {section.title}
           </span>
@@ -54,7 +43,7 @@ const TimeAnchor = ({ sections, activeSection, onSectionChange }) => {
     </div>
   );
 
-  // 方案3: 点状指示器导航（去掉图标）
+  // 方案3: 点状指示器导航
   const DotStyleNavigation = () => (
     <div className="flex justify-center space-x-4">
       {sections.map((section) => (
