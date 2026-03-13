@@ -1,3 +1,4 @@
+
 import TimeAnchor from '@/components/TimeAnchor';
 import EncouragementToast from '@/components/EncouragementToast';
 import { Heart, User, Baby, CheckCircle, Clock } from 'lucide-react';
@@ -30,10 +31,10 @@ const Index = () => {
       title: '手术前一天',
       icon: <Clock className="h-5 w-5" />,
       items: [
-        { text: '带老婆吃一顿她想吃的大餐（术后一个月不能出门乱吃，这是最后机会）', completed: false },
-        { text: '两人一起清点待产包，确认物品位置，你要知道每样东西在哪', completed: false },
-        { text: '术前8小时禁食禁水，帮她记好时间', completed: false },
-        { text: '给老婆做好心理建设，告诉她你会一直在外面等她', completed: false }
+        { text: '1. 带老婆吃一顿她想吃的大餐（术后一个月不能出门乱吃，这是最后机会）', completed: false },
+        { text: '2. 两人一起清点待产包，确认物品位置，你要知道每样东西在哪', completed: false },
+        { text: '3. 术前8小时禁食禁水，帮她记好时间', completed: false },
+        { text: '4. 给老婆做好心理建设，告诉她你会一直在外面等她', completed: false }
       ]
     },
     {
