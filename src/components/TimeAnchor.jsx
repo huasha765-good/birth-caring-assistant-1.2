@@ -2,16 +2,7 @@ import React from 'react';
 import { Clock, Heart, User, Baby, AlertTriangle } from 'lucide-react';
 
 const TimeAnchor = ({ sections, activeSection, onSectionChange }) => {
-  // 为每个部分创建图标映射
-  const iconMap = {
-    before: <Clock className="h-4 w-4" />,
-    day: <Heart className="h-4 w-4" />,
-    hospital: <User className="h-4 w-4" />,
-    home: <Baby className="h-4 w-4" />,
-    warnings: <AlertTriangle className="h-4 w-4" />
-  };
-
-  // 方案1: 卡片式导航
+  // 方案1: 卡片式导航（去掉图标）
   const CardStyleNavigation = () => (
     <div className="flex space-x-2 overflow-x-auto pb-2">
       {sections.map((section) => (
@@ -25,7 +16,7 @@ const TimeAnchor = ({ sections, activeSection, onSectionChange }) => {
           }`}
         >
           <span className="mb-1 flex items-center justify-center w-8 h-8 rounded-full bg-current/20">
-            {React.cloneElement(iconMap[section.id] || <Clock className="h-4 w-4" />, {
+            {React.cloneElement(section.icon, {
               className: "h-4 w-4 text-current"
             })}
           </span>
@@ -37,7 +28,7 @@ const TimeAnchor = ({ sections, activeSection, onSectionChange }) => {
     </div>
   );
 
-  // 方案2: 标签式导航
+  // 方案2: 标签式导航（去掉图标）
   const TabStyleNavigation = () => (
     <div className="flex space-x-1 overflow-x-auto bg-gray-100 p-1 rounded-lg">
       {sections.map((section) => (
@@ -51,7 +42,7 @@ const TimeAnchor = ({ sections, activeSection, onSectionChange }) => {
           }`}
         >
           <span className="flex items-center justify-center w-5 h-5">
-            {React.cloneElement(iconMap[section.id] || <Clock className="h-4 w-4" />, {
+            {React.cloneElement(section.icon, {
               className: "h-3.5 w-3.5 text-current"
             })}
           </span>
@@ -63,7 +54,7 @@ const TimeAnchor = ({ sections, activeSection, onSectionChange }) => {
     </div>
   );
 
-  // 方案3: 点状指示器导航
+  // 方案3: 点状指示器导航（去掉图标）
   const DotStyleNavigation = () => (
     <div className="flex justify-center space-x-4">
       {sections.map((section) => (
