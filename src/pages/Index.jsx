@@ -1,4 +1,3 @@
-
 import TimeAnchor from '@/components/TimeAnchor';
 import EncouragementToast from '@/components/EncouragementToast';
 import { Heart, User, Baby, CheckCircle, Clock } from 'lucide-react';
