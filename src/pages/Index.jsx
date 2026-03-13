@@ -210,7 +210,7 @@ const Index = () => {
 
 
       <main className="container mx-auto px-4 py-6 border-t-rose-100 border-b-rose-100 border-l-rose-100 border-r-rose-100">
-        <div className="mb-6 text-center">
+        <div className="mb-4 text-center">
           <img
             src="https://nocode.meituan.com/photo/search?keyword=father,newborn,care&width=400&height=300"
             alt="准爸爸照顾新生儿"
@@ -221,7 +221,7 @@ const Index = () => {
           </p>
         </div>
 
-        <div className="space-y-6">
+        <div className="space-y-4">
           {careGuideData.map((section) =>
           <div key={section.id} id={section.id}>
               <CareGuideCard
