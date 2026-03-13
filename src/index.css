@@ -104,10 +104,9 @@
 }
 
 @layer components {
-  /* MTD 卡片样式 - 方案1：更柔和的卡片样式 */
+  /* MTD 卡片样式 - 原始方案 */
   .mtd-card {
-    @apply bg-white rounded-xl shadow-md border-0;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    @apply bg-white rounded-lg shadow-sm border border-gray-200;
   }
   
   /* MTD 按钮样式 */
@@ -202,7 +201,7 @@
   
   /* 优化卡片内边距 */
   .mtd-card {
-    @apply rounded-xl;
+    @apply rounded-lg;
   }
   
   /* 优化按钮内边距 */
