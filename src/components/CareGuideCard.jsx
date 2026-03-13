@@ -28,7 +28,7 @@ const CareGuideCard = ({ title, icon, items }) => {
       <div className="p-4 pt-0">
           <ul className="space-y-3">
             {items.map((item, index) =>
-          <li key={index} className="border-b border-gray-100 pb-3 last:border-0 flex justify-center items-center">
+          <li key={index} className="border-b border-gray-100 pb-3 last:border-0 flex justify-center items-center flex-col">
                 <div className="text-gray-800 flex">
                   <span className="text-body-md break-words text-left w-full pl-0">{item.text}</span>
                 </div>
