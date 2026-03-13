@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
-const CareGuideCard = ({ title, icon, items }) => {
+const CareGuideCard = ({ title, icon, items, isLast }) => {
   const [expanded, setExpanded] = useState(true);
 
   const toggleExpanded = () => {
@@ -15,8 +15,8 @@ const CareGuideCard = ({ title, icon, items }) => {
 
         <div className="flex items-center">
           <span className="text-blue-600 mr-2">{icon}</span>
-          {/* 只有当卡片展开时标题为红色，否则为黑色 */}
-          <h2 className={expanded ? "text-red-500" : "text-gray-900"}>{title}</h2>
+          {/* 只有最后一个卡片的标题始终为红色，其他卡片标题始终为黑色 */}
+          <h2 className={isLast ? "text-red-500" : "text-gray-900"}>{title}</h2>
         </div>
         {expanded ?
         <ChevronUp className="h-5 w-5 text-gray-500" /> :

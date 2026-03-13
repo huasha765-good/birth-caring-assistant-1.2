@@ -1,4 +1,3 @@
-
 import TimeAnchor from '@/components/TimeAnchor';
 import EncouragementToast from '@/components/EncouragementToast';
 import { Heart, User, Baby, CheckCircle, Clock } from 'lucide-react';
@@ -223,12 +222,13 @@ const Index = () => {
         </div>
 
         <div className="space-y-4">
-          {careGuideData.map((section) =>
+          {careGuideData.map((section, index) =>
             <div key={section.id} id={section.id}>
               <CareGuideCard
                 title={section.title}
                 icon={section.icon}
-                items={section.items} />
+                items={section.items}
+                isLast={index === careGuideData.length - 1} />
 
             </div>
           )}
