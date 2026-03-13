@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import { Heart, Baby, User, Clock, CheckCircle } from 'lucide-react';
-import CareGuideCard from '@/components/CareGuideCard';
+
 import TimeAnchor from '@/components/TimeAnchor';
 import EncouragementToast from '@/components/EncouragementToast';
-
+import { Heart, User, Baby, CheckCircle, Clock } from 'lucide-react';
+import React, { useEffect, useState } from 'react';
+import CareGuideCard from '@/components/CareGuideCard';
 const Index = () => {
   const [activeSection, setActiveSection] = useState('before');
   const [showEncouragement, setShowEncouragement] = useState(false);
@@ -43,7 +43,7 @@ const Index = () => {
     icon: <Heart className="h-5 w-5" />,
     items: [
     {
-      text: '送进手术室前：陪老婆做好术前检查和签字手续',
+      text: '1. 送进手术室前：陪老婆做好术前检查和签字手续',
       subItems: [
       '老婆要自己走进手术室，进去后要插尿管、打麻药、剖七层再缝合，非常无助害怕',
       '送她进去时给她加油鼓劲，说"我在外面等你"',
@@ -52,7 +52,7 @@ const Index = () => {
       completed: false
     },
     {
-      text: '在手术室外等待',
+      text: '2. 在手术室外等待',
       subItems: [
       '不要离开！不要听长辈说"去吃饭吧"，就在门口等',
       '宝宝先出来，给宝宝拍照记录，然后让其他家人陪宝宝，你继续等老婆出来'],
@@ -60,7 +60,7 @@ const Index = () => {
       completed: false
     },
     {
-      text: '老婆出手术室后（第1天）',
+      text: '3. 老婆出手术室后（第1天）',
       subItems: [
       '第一句话说"辛苦了"，条件允许送一束花或准备一份小礼物',
       '老婆下半身光着，提前清场，把无关人员请出病房',
