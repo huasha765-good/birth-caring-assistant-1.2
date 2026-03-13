@@ -90,10 +90,9 @@
 }
 
 @layer components {
-  /* MTD 卡片样式 - 修改为白色背景，增大圆角，增加弥散阴影 */
+  /* MTD 卡片样式 - 修改为白色背景，增大圆角，去掉阴影 */
   .mtd-card {
     @apply bg-white rounded-2xl;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   }
   
   /* MTD 按钮样式 */
