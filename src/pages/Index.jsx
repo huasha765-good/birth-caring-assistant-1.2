@@ -216,7 +216,7 @@ const Index = () => {
             alt="准爸爸照顾新生儿"
             className="mx-auto object-cover rounded-lg shadow-sm h-48 w-full max-w-md" />
 
-          <p className="mt-4 text-gray-600 max-w-2xl mx-auto text-left">你现在的每一点照顾，都是给感情存钱。加油，准爸爸！ 💪
+          <p className="mt-4 text-gray-600 max-w-2xl mx-auto text-left text-[13px]">你现在的每一点照顾，都是给感情存钱。加油，准爸爸！ 💪
 
           </p>
         </div>
