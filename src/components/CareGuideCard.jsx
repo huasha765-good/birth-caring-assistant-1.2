@@ -15,7 +15,9 @@ const CareGuideCard = ({ title, icon, items, isLast }) => {
 
         <div className="flex items-center">
           <span className="text-blue-600 mr-2">{icon}</span>
-          <h2 className={isLast ? "text-blue-500" : "text-gray-900"}>{title}</h2>
+          <h2 className={isLast ? "text-blue-500" : "text-gray-900"}>
+            {isLast ? "最容易结\"月子仇\"的雷区" : title}
+          </h2>
         </div>
         {expanded ?
         <ChevronUp className="h-5 w-5 text-gray-500" /> :
