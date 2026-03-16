@@ -61,16 +61,12 @@
     -moz-osx-font-smoothing: grayscale;
   }
   
-  /* 美团设计组件字体设置 */
   html {
     font-family: "PingFang SC", "Helvetica Neue", Helvetica, "Microsoft YaHei", Arial, sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    font-size: 16px;
-    line-height: 1.5;
   }
   
-  /* MTD 字体大小规范 */
   .text-display-lg { font-size: 32px; line-height: 42px; font-weight: 600; }
   .text-display-md { font-size: 28px; line-height: 36px; font-weight: 600; }
   .text-display-sm { font-size: 24px; line-height: 32px; font-weight: 600; }
@@ -90,12 +86,10 @@
 }
 
 @layer components {
-  /* MTD 卡片样式 - 修改为白色背景，增大圆角，去掉阴影 */
   .mtd-card {
     @apply bg-white rounded-2xl;
   }
   
-  /* MTD 按钮样式 */
   .mtd-button {
     @apply rounded-md px-4 py-2 font-medium transition-all duration-200;
   }
@@ -108,76 +102,83 @@
     @apply bg-gray-100 text-gray-900 hover:bg-gray-200 active:bg-gray-300;
   }
   
-  /* MTD 输入框样式 */
   .mtd-input {
     @apply rounded-md border border-gray-300 bg-white px-3 py-2 text-base;
   }
   
-  /* MTD 分隔线 */
   .mtd-divider {
     @apply h-px bg-gray-200;
+  }
+  
+  /* 隐藏滚动条但保持滚动功能 */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
   }
 }
 
 /* 移动端优化样式 */
 @media (max-width: 640px) {
   .container {
-    @apply px-4;
+    @apply px-3;
   }
   
   .text-display-lg {
-    font-size: 28px;
-    line-height: 36px;
-  }
-  
-  .text-display-md {
     font-size: 24px;
     line-height: 32px;
   }
   
-  .text-display-sm {
+  .text-display-md {
     font-size: 20px;
     line-height: 28px;
   }
   
-  .text-headline-lg {
+  .text-display-sm {
     font-size: 18px;
     line-height: 26px;
   }
   
-  .text-headline-md {
+  .text-headline-lg {
     font-size: 16px;
     line-height: 24px;
+  }
+  
+  .text-headline-md {
+    font-size: 15px;
+    line-height: 22px;
   }
   
   .text-headline-sm {
-    font-size: 15px;
-    line-height: 22px;
+    font-size: 14px;
+    line-height: 20px;
   }
   
   .text-body-lg {
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 15px;
+    line-height: 22px;
   }
   
   .text-body-md {
-    font-size: 15px;
-    line-height: 22px;
+    font-size: 14px;
+    line-height: 20px;
   }
   
   .text-body-sm {
     font-size: 13px;
-    line-height: 20px;
+    line-height: 18px;
   }
   
   .text-caption-lg {
     font-size: 12px;
-    line-height: 18px;
+    line-height: 16px;
   }
   
   .text-caption-md {
     font-size: 11px;
-    line-height: 16px;
+    line-height: 15px;
   }
   
   .text-caption-sm {
@@ -185,13 +186,18 @@
     line-height: 14px;
   }
   
-  /* 优化卡片内边距 */
   .mtd-card {
-    @apply rounded-2xl;
+    @apply rounded-xl;
   }
   
-  /* 优化按钮内边距 */
   .mtd-button {
-    @apply px-3 py-1.5;
+    @apply px-3 py-1.5 text-sm;
+  }
+}
+
+/* 小屏幕优化 */
+@media (max-width: 375px) {
+  .container {
+    @apply px-2;
   }
 }
