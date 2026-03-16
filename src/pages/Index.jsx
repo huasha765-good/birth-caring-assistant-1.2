@@ -1,11 +1,12 @@
-import TimeAnchor from '@/components/TimeAnchor';
-import EncouragementToast from '@/components/EncouragementToast';
-import { Heart, User, Baby, CheckCircle, Clock, Calendar, Home, AlertTriangle, Shield, Star, Activity, Users } from 'lucide-react';
-import React, { useEffect, useState } from 'react';
+import { Heart, User, Shield, Baby, CheckCircle, Star, Home, Calendar, Activity, Clock, Users, AlertTriangle } from 'lucide-react';
 import CareGuideCard from '@/components/CareGuideCard';
+import React, { useEffect, useState } from 'react';
+import EncouragementToast from '@/components/EncouragementToast';
+import TimeAnchor from '@/components/TimeAnchor';
 const Index = () => {
   const [activeSection, setActiveSection] = useState('before');
   const [showEncouragement, setShowEncouragement] = useState(false);
+  const [previewScale, setPreviewScale] = useState(100); // 添加预览图比例状态
 
   useEffect(() => {
     // 检查是否是当天第一次打开应用
@@ -194,12 +195,41 @@ const Index = () => {
     }
   };
 
+  // 添加比例控制处理函数
+  const handleScaleChange = (scale) => {
+    setPreviewScale(scale);
+    // 应用比例到预览区域
+    const previewElement = document.getElementById('preview-area');
+    if (previewElement) {
+      previewElement.style.transform = `scale(${scale / 100})`;
+      previewElement.style.transformOrigin = 'top center';
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#e0f7fa]/60 to-[#bbdefb]/60 pb-20">
       <header className="bg-white sticky top-0 z-10 border-b border-[#00000000]">
         <div className="container mx-auto px-4 py-4">
           <h1 className="text-display-sm text-center text-gray-900">准爸爸剖腹产护理助手</h1>
           <p className="text-center text-caption-lg text-gray-500">陪伴是最好的照顾</p>
+          
+          {/* 添加预览比例控制 */}
+          <div className="mt-4 flex justify-center space-x-2">
+            <span className="text-sm text-gray-600">预览比例:</span>
+            {[80, 100, 120].map((scale) => (
+              <button
+                key={scale}
+                onClick={() => handleScaleChange(scale)}
+                className={`px-3 py-1 text-sm rounded-md ${
+                  previewScale === scale
+                    ? 'bg-blue-500 text-white'
+                    : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                }`}
+              >
+                {scale}%
+              </button>
+            ))}
+          </div>
         </div>
       </header>
 
@@ -209,7 +239,7 @@ const Index = () => {
         onSectionChange={handleSectionChange} />
 
 
-      <main className="container mx-auto px-4 py-4 border-t-rose-100 border-b-rose-100 border-l-rose-100 border-r-rose-100">
+      <main className="container mx-auto px-4 py-4 border-t-rose-100 border-b-rose-100 border-l-rose-100 border-r-rose-100" id="preview-area">
         <div className="mb-3 text-center">
           <img src="https://s3plus.meituan.net/mcopilot-pub/nocode_image/default/jimeng-2026-03-13-3649-极简卡通风格，一家三口正视图头像，戴眼镜的长发妈妈，戴眼镜的爸爸，脸型更圆润的爸...-sejo4574hn6vam3af28l7rwe94rcy2.png"
 
